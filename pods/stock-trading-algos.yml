@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stock-trading-algorithms
+  labels:
+    app: web
+spec:
+  containers:
+    - name: stock-trading-algorithms
+      image: temmink/stock-trading-algorithms:0.1
+      ports:
+        - containerPort: 8081
+      env:
+        - name: spring.datasource.url
+          value: "jdbc:postgresql://192.168.49.1:5432/tradingalgorithms"
