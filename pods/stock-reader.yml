@@ -3,11 +3,11 @@ kind: Pod
 metadata:
   name: stock-reader
   labels:
-    app: web
+    app: stock-reader
 spec:
   containers:
     - name: stock-reader
-      image: temmink/gimmethemoney:0.1
+      image: temmink/stock-reader:latest
       ports:
         - containerPort: 8080
       env:
@@ -15,3 +15,11 @@ spec:
           value: "r2dbc:postgresql://192.168.49.1:5432"
         - name: spring.flyway.url
           value: "jdbc:postgresql://192.168.49.1:5432/stocks"
+        - name: spring.flyway.user
+          value: "postgres"
+        - name: spring.flyway.password
+          value: "postgres"
+        - name: db.username
+          value: "postgres"
+        - name: db.password
+          value: "postgres"
