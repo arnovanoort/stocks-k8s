@@ -7,7 +7,5 @@ spec:
   ports:
     - port: 80
       targetPort: 8081
-      nodePort: 31112
-      protocol: TCP
   selector:
     app: stock-trading-algorithms
