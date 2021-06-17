@@ -14,4 +14,4 @@ spec:
         - name: spring.datasource.url
           value: "jdbc:postgresql://192.168.49.1:5432/tradingalgorithms"
         - name: stockdata.url.host
-          value: "http://stock-reader-nodeport"
+          value: "http://stock-reader-svc"
